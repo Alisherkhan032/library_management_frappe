@@ -1,0 +1,15 @@
+<div style="display: flex; align-items: center; gap: 15px; padding: 10px; border-bottom: 1px solid #ddd;">
+	<a href="/{{ doc.route |e }}" style="display: flex; align-items: center; text-decoration: none; color: inherit; flex: 1;">
+		<img style="height: 120px; width: auto; border-radius: 8px; object-fit: cover;" src="{{ image }}" alt="{{ title }}">
+		<span style="font-size: 18px; font-weight: bold; margin-left: 15px;">{{ (doc.title or doc.name) |e }}</span>
+	</a>
+	<span style="padding: 5px 10px; border-radius: 5px; font-weight: bold;
+		{% if doc.status == 'Available' %}
+			background-color: #d4edda; color: #155724;
+		{% else %}
+			background-color: #f8d7da; color: #721c24;
+		{% endif %}
+	">
+		{{ doc.status }}
+	</span>
+</div>

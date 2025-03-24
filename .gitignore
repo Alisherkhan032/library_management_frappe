@@ -1,0 +1,74 @@
+# Ignore Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore environment files
+.env
+*.env
+*.venv
+*.virtualenv
+venv/
+env/
+node_modules/
+bower_components/
+
+# Ignore logs and caches
+logs/
+*.log
+*.swp
+*.swo
+*.swn
+*.sws
+*.swd
+*.swm
+*.swh
+*.swt
+
+# Ignore compiled assets and cache
+*.tar.gz
+*.zip
+*.7z
+*.bak
+*.db
+*.sqlite
+*.sqlite3
+*.pid
+*.lock
+*.dump
+*.swp
+*.swo
+*.swn
+*.sws
+*.swd
+*.swm
+*.swh
+*.swt
+*.class
+*.dll
+*.so
+*.dylib
+
+# Ignore Frappe specific files
+sites/assets/
+sites/*/public/
+sites/*/private/
+sites/*/backups/
+sites/*/logs/
+sites/*/error-snapshots/
+sites/*/__pycache__/
+sites/*/locks/
+sites/*/archived_sites/
+sites/*/node_modules/
+
+# Ignore database and configuration files
+sites/*/site_config.json
+sites/*/local_config.json
+sites/*/private/files/
+sites/*/public/files/
+sites/*/public/build/
+
+# Ignore Frappe and ERPNext default apps (if only pushing custom apps)
+apps/erpnext/
+apps/frappe/

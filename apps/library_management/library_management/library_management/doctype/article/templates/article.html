@@ -1,0 +1,59 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+  <style>
+    /* Container for image and content */
+    .book-container {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    /* Left column for the image */
+    .book-image {
+      flex: 0 0 30%;
+      max-width: 30%;
+    }
+    .book-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    /* Right column for the content */
+    .book-content {
+      flex: 1;
+    }
+    /* Default styling for status messages */
+    .status-available {
+      color: green;
+      font-weight: bold;
+    }
+    .status-issued {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+
+  <div class="book-container">
+    <div class="book-image">
+      <img src="{{ image }}" alt="{{ title }}">
+    </div>
+    <div class="book-content">
+      <h1>{{ title | e }}</h1>
+      <p>By {{ author }}</p>
+      
+      {%- if status == 'Available' -%}
+        <p class="status-available">Available</p>
+      {%- elif status == 'Issued' -%}
+        <p class="status-issued">Issued</p>
+      {%- endif -%}
+      
+      <p>Publisher: <strong>{{ publisher }}</strong></p>
+      <p>ISBN: <strong>{{ isbn }}</strong></p>
+      
+      <div>
+        {{ description }}
+      </div>
+    </div>
+  </div>
+{% endblock %}
