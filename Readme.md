@@ -25,11 +25,16 @@ The system includes the following key models:
 - **Book Management:** Books can be created, and managed within the system's catalog.
 - **Issue and Return Process:** Library members can borrow books, which are tracked through the transaction system.
 - **Membership Plans:** The system supports membership plan with configurable durations.
-
+- 
+## Screenshots
+![Library Screenshot](assets/image1.png)
+![Library Screenshot](assets/image2.png)
 ## Prerequisites
 
 - **Python 3.x**
 - **Frappe Bench CLI**
 - **Node.js and npm** (for asset compilation)
 - **Redis and MariaDB/MySQL** (for caching and database management)
+
+
 
